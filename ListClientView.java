@@ -1,5 +1,6 @@
 package fc.Application.MVC.Views;
 
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Dialog;
 import org.eclipse.swt.widgets.Display;
@@ -7,9 +8,11 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 
+import fc.Application.MVC.Controllers.ListClientController;
 import fc.Application.MVC.ViewModels.ClientViewModel;
 
 
@@ -79,7 +82,7 @@ public class ListClientView extends Dialog {
 		combo.add("Client 1");
 		
 		table = new Table(shlListe, SWT.BORDER | SWT.FULL_SELECTION);
-		table.setBounds(50, 100, 650, 300);
+		table.setBounds(50, 100, 650, 400);
 		table.setHeaderVisible(true);
 		table.setLinesVisible(true);
 		
@@ -98,6 +101,15 @@ public class ListClientView extends Dialog {
 		TableColumn tcMontantTotal = new TableColumn(table, SWT.NONE);
 		tcMontantTotal.setWidth(150);
 		tcMontantTotal.setText("Montant total");
+
+		Button btnEditer = new Button(shlListe, SWT.NONE);
+		btnEditer.setBounds(625, 50, 75, 30);
+		btnEditer.setText("Editer");
+
+
+		Button btnDétailsCommande = new Button(shlListe, SWT.NONE);
+		btnDétailsCommande.setBounds(500, 510, 200, 30);
+		btnDétailsCommande.setText("Voir détails commande");
 		
 		// COMMANDE CONTIENT LISTE COMMANDE DU CLIENT
 
