@@ -1,0 +1,7 @@
+Vue de démarrage : 
+
+
+	Affiche la liste des clients dans un menu déroulant ( en haut comme sur image)
+
+	numéro de commande | date commande | nom + prénom | montant total
+
